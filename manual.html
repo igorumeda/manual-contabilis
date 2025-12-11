@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Recursos Humanos - Sistema Contabilis</title>
+  <style>
+    /* CSS simplificado para compatibilidade com controles WebBrowser antigos (MSHTML/IE) */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Tahoma, Verdana, Arial, sans-serif;
+      line-height: 1.4;
+      color: #333;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .logo {
+      width: 100%;
+      height: 130px;
+      text-align: center;
+      line-height: 130px;
+    }
+
+    .logo img {
+      max-height: 120px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    header {
+      background-color: #5a8c1f; /* fallback para gradiente */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin: 0 0 10px 0;
+    }
+
+    header .meta {
+      font-size: 12px;
+    }
+
+    .preambulo {
+      background: #f8f9fa;
+      padding: 15px;
+      margin: 15px;
+      border-left: 4px solid #486915;
+    }
+
+    nav {
+      background: #fff;
+      padding: 15px;
+      margin: 15px;
+      border: 1px solid #e0e0e0;
+    }
+
+    nav h2 {
+      color: #3c5711;
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    nav ul { list-style: none; margin: 0; padding: 0; }
+    nav li { margin-bottom: 6px; }
+
+    nav a {
+      color: #486915;
+      text-decoration: none;
+      display: block;
+      padding: 4px;
+    }
+
+    nav a:hover { background: #eee; }
+
+    .content { padding: 0 20px 20px 20px; }
+
+    section { margin-bottom: 24px; }
+
+    h2 {
+      color: #3c5711;
+      font-size: 22px;
+      margin: 20px 0 10px 0;
+      padding-bottom: 6px;
+      border-bottom: 3px solid #486915;
+    }
+
+    h3 { color: #486915; font-size: 16px; margin: 16px 0 8px 0; }
+
+    .nota { background: #fff3cd; border-left: 4px solid #ffc107; padding: 10px; margin: 12px 0; }
+    .nota strong { color: #856404; }
+
+    .passo { background: #e7f3ff; padding: 12px; margin: 12px 0; border-left: 4px solid #0066cc; }
+    .passo h4 { color: #0066cc; font-size: 14px; margin: 0 0 8px 0; }
+
+    .imagem-container { margin: 12px 0; text-align: center; }
+    .imagem-container img { max-width: 100%; height: auto; border: 1px solid #ccc; }
+
+    .finalizacao { background: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 12px 0; }
+    .finalizacao h4 { color: #155724; font-size: 14px; margin: 0 0 8px 0; }
+
+    footer { background: #3c5711; color: #fff; text-align: center; padding: 16px; margin-top: 20px; }
+
+    /* Remover regras modernas como flexbox, gradients complexos, transitions e box-shadow. */
+    /* Nota: media queries e outras features não são confiáveis em MSHTML antigos; mantemos estrutura fixa. */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="./logo.png" alt="logotipo">
+    </div>
+    <header>
+      <h1>MANUAL DE UTILIZAÇÃO DO USUÁRIO</h1>
+      <div class="meta">
+        <p><strong>MÓDULO:</strong> RECURSOS HUMANOS</p>
+        <p><strong>VERSÃO:</strong> 1.0</p>
+        <p><strong>ATUALIZADO EM:</strong> 30 DE NOVEMBRO DE 2022</p>
+      </div>
+    </header>
+
+    <div class="preambulo">
+      <h2>PREÂMBULO</h2>
+      <p>Este manual técnico foi criado como guia que transmite informações instrutivas para utilização do Módulo de Recursos Humanos do Sistema Contabilis, incluindo os procedimentos necessários para o correto andamento da rotina de trabalho dos servidores da área de Gestão de Pessoas.</p>
+      <p>Tal documento possui o passo a passo detalhado de como funcionam os principais itens trabalhos dentro do setor indicado. Deve-se utilizar este manual preferencialmente quando de dúvidas, erros ou como forma de aprendizado para novos usuários.</p>
+      
+      <h3>CONTEÚDO</h3>
+      <ul>
+        <li>Instruções detalhadas de utilização do módulo de Recursos Humanos do Sistema Contabilis</li>
+        <li>Imagens ilustrativas para todos os procedimentos</li>
+        <li>Notas extras do Criador do Manual</li>
+      </ul>
+
+      <h3>ORGANIZADOR DO MANUAL</h3>
+      <p><strong>Juan Miguel Andrade Obinu Gonzalez</strong><br>Gerente de Tecnologia da Rarotec</p>
+    </div>
+
+    <nav>
+      <h2>SUMÁRIO</h2>
+      <ul>
+        <li><a href="#gestao-cadastros">GESTÃO DE CADASTROS</a>
+          <ul style="margin-left: 1.5rem;">
+            <li><a href="#cadastro-funcionario">Cadastro de Funcionário</a></li>
+            <li><a href="#cadastro-horario">Cadastro de Horário de Trabalho</a></li>
+            <li><a href="#cadastro-cargo">Cadastro de Cargo</a></li>
+            <li><a href="#cadastro-contrato">Cadastro de Contrato de Trabalho</a></li>
+            <li><a href="#cadastro-tempo-contribuicao">Cadastro de Tempo de Contribuição</a></li>
+            <li><a href="#cadastro-processo">Cadastro de Processo Jurídico/Administrativo</a></li>
+            <li><a href="#cadastro-grupo-etario">Cadastro de Grupo Etário</a></li>
+            <li><a href="#cadastro-instituicao-ensino">Cadastro de Instituição de Ensino</a></li>
+            <li><a href="#cadastro-atos">Cadastro de Atos Administrativos</a></li>
+            <li><a href="#cadastro-afastamentos">Cadastro de Afastamentos</a></li>
+            <li><a href="#cadastro-ajuste-salarial">Cadastro de Ajuste Salarial</a></li>
+            <li><a href="#cadastro-faltas">Cadastro de Faltas</a></li>
+            <li><a href="#cadastro-ferias">Cadastro de Férias</a></li>
+            <li><a href="#cadastro-concursos">Cadastro de Concursos</a></li>
+            <li><a href="#cadastro-candidatos">Cadastro de Candidatos dos Concursos</a></li>
+            <li><a href="#cadastro-treinamento">Cadastro de Treinamento</a></li>
+            <li><a href="#cadastro-tipo-treinamento">Cadastro do Tipo de Treinamento</a></li>
+            <li><a href="#cadastro-fornecedor">Cadastro do Fornecedor de Treinamento</a></li>
+            <li><a href="#cadastro-sindicato">Cadastro do Sindicato</a></li>
+            <li><a href="#cadastro-funcao">Cadastro da Função do Funcionário</a></li>
+            <li><a href="#cadastro-regime">Cadastro do Regime do Funcionário</a></li>
+            <li><a href="#cadastro-local-trabalho">Cadastro do Local de Trabalho</a></li>
+            <li><a href="#cadastro-dirf">Cadastro da DIRF</a></li>
+            <li><a href="#cadastro-rais">Cadastro da RAIS</a></li>
+            <li><a href="#cadastro-evento">Cadastro de Evento</a></li>
+            <li><a href="#cadastro-evento-especial">Cadastro de Evento Especial</a></li>
+            <li><a href="#cadastro-lancamentos">Cadastro de Lançamentos</a></li>
+            <li><a href="#cadastro-informes">Cadastro de Informes</a></li>
+          </ul>
+        </li>
+        <li><a href="#gestao-pesquisas">GESTÃO DE PESQUISAS</a></li>
+        <li><a href="#gestao-parametrizacoes">GESTÃO DE PARAMETRIZAÇÕES</a></li>
+        <li><a href="#gestao-relatorios">GESTÃO DE RELATÓRIOS</a></li>
+        <li><a href="#gestao-esocial">GESTÃO DO eSocial</a>
+          <ul style="margin-left: 1.5rem;">
+            <li><a href="#qualificacao-cadastral">Qualificação Cadastral</a></li>
+            <li><a href="#configuracao-esocial">Configuração do eSocial</a></li>
+            <li><a href="#exportacao-esocial">Exportação do eSocial</a></li>
+            <li><a href="#painel-envio">Painel de Envio do eSocial</a></li>
+          </ul>
+        </li>
+        <li><a href="#outras-funcionalidades">OUTRAS FUNCIONALIDADES</a>
+          <ul style="margin-left: 1.5rem;">
+            <li><a href="#recalcular-lancamentos">Recalcular Lançamentos</a></li>
+            <li><a href="#fechamento-folha">Fechamento da Folha</a></li>
+            <li><a href="#checklist">Checklist de Verificação</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <section id="gestao-cadastros">
+        <h2>GESTÃO DE CADASTROS</h2>
+
+        <section id="cadastro-funcionario">
+          <h3>CADASTRO DE FUNCIONÁRIO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE FUNCIONÁRIO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "FUNCIONÁRIO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img170.jpg" alt="Tela de acesso ao cadastro de funcionário">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img172.jpg" alt="Botão incluir para novo cadastro">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img174.jpg" alt="Tela de cadastro completo">
+          </div>
+        </section>
+
+        <section id="cadastro-horario">
+          <h3>CADASTRO DE HORÁRIO DE TRABALHO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE HORÁRIO DE TRABALHO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS HORÁRIOS DE EXPEDIENTE DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "HORÁRIO DE TRABALHO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img176.jpg" alt="Tela de acesso ao cadastro de horário">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img178.jpg" alt="Botão incluir para novo horário">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img180.jpg" alt="Tela de cadastro de horário completo">
+          </div>
+        </section>
+
+        <section id="cadastro-cargo">
+          <h3>CADASTRO DE CARGO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE CARGO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS CARGOS DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "CARGO -> CADASTRO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img182.jpg" alt="Tela de acesso ao cadastro de cargo">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img184.jpg" alt="Botão incluir para novo cargo">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img186.jpg" alt="Tela de cadastro de cargo completo">
+          </div>
+        </section>
+
+        <section id="cadastro-contrato">
+          <h3>CADASTRO DE CONTRATO DE TRABALHO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE CONTRATO DE TRABALHO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS CONTRATOS DE TRABALHO DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "CONTRATO DE TRABALHO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img188.jpg" alt="Tela de acesso ao cadastro de contrato">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img190.jpg" alt="Botão incluir para novo contrato">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img192.jpg" alt="Tela de cadastro de contrato completo">
+          </div>
+        </section>
+
+        <section id="cadastro-tempo-contribuicao">
+          <h3>CADASTRO DE TEMPO DE CONTRIBUIÇÃO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE TEMPO DE CONTRIBUIÇÃO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS TEMPOS DE CONTRIBUIÇÃO DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "TEMPO DE CONTRIBUIÇÃO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img194.jpg" alt="Tela de acesso ao cadastro de tempo de contribuição">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img196.jpg" alt="Botão incluir para novo tempo de contribuição">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img198.jpg" alt="Tela de cadastro de tempo de contribuição completo">
+          </div>
+        </section>
+
+        <section id="cadastro-processo">
+          <h3>CADASTRO DE PROCESSO JURÍDICO/ADMINISTRATIVO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE PROCESSO JURÍDICO/ADMINISTRATIVO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS PROCESSOS JURÍDICOS/ADMINISTRATIVOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "PROCESSO JURÍDICO/ADMINISTRATIVO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img200.jpg" alt="Tela de acesso ao cadastro de processo">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img202.jpg" alt="Botão incluir para novo processo">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img204.jpg" alt="Tela de cadastro de processo completo">
+          </div>
+        </section>
+
+        <section id="cadastro-grupo-etario">
+          <h3>CADASTRO DE GRUPO ETÁRIO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE GRUPO ETÁRIO POSSUI COMO FINALIDADE O CADASTRAMENTO DO GRUPO ETÁRIO DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "GRUPO ETÁRIO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img206.jpg" alt="Tela de acesso ao cadastro de grupo etário">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img208.jpg" alt="Botão incluir para novo grupo etário">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img210.jpg" alt="Tela de cadastro de grupo etário completo">
+          </div>
+        </section>
+
+        <section id="cadastro-instituicao-ensino">
+          <h3>CADASTRO DE INSTITUIÇÃO DE ENSINO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE INSTITUIÇÃO DE ENSINO POSSUI COMO FINALIDADE O CADASTRAMENTO DE INSTITUIÇÕES DE ENSINO UTILIZADAS PELO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "PESSOAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "INSTITUIÇÃO DE ENSINO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img212.jpg" alt="Tela de acesso ao cadastro de instituição">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img214.jpg" alt="Botão incluir para nova instituição">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img216.jpg" alt="Tela de cadastro de instituição completo">
+          </div>
+        </section>
+
+        <section id="cadastro-atos">
+          <h3>CADASTRO DE ATOS ADMINISTRATIVOS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE ATOS ADMINISTRATIVOS POSSUI COMO FINALIDADE O CADASTRAMENTO DE ATOS ADMINISTRATIVOS EXPEDIDOS PELO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "ATO ADMISTRATIVO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img218.jpg" alt="Tela de acesso ao cadastro de atos">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img220.jpg" alt="Botão incluir para novo ato">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img222.jpg" alt="Tela de cadastro de ato completo">
+          </div>
+        </section>
+
+        <section id="cadastro-afastamentos">
+          <h3>CADASTRO DE AFASTAMENTOS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE AFASTAMENTOS POSSUI COMO FINALIDADE O CADASTRAMENTO DE AFASTAMENTOS ORDENADOS PELO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "AFASTAMENTO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA SELECIONE O BOTÃO "INDIVIDUAL" OU "COLETIVO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img224.jpg" alt="Tela de acesso ao cadastro de afastamentos">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img226.jpg" alt="Botão incluir para novo afastamento">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img228.jpg" alt="Tela de cadastro de afastamento completo">
+          </div>
+        </section>
+
+        <section id="cadastro-ajuste-salarial">
+          <h3>CADASTRO DE AJUSTE SALARIAL</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE AJUSTE SALARIAL POSSUI COMO FINALIDADE O CADASTRAMENTO DE AJUSTES SALARIAIS PELO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "AJUSTE SALARIAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img230.jpg" alt="Tela de cadastro de ajuste salarial">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img232.jpg" alt="Tela de cadastro de ajuste salarial completo">
+          </div>
+        </section>
+
+        <section id="cadastro-faltas">
+          <h3>CADASTRO DE FALTAS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE FALTAS POSSUI COMO FINALIDADE O CADASTRAMENTO DE FALTAS DOS FUNCIONÁRIOS NO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "FALTAS" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img234.jpg" alt="Tela de acesso ao cadastro de faltas">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img236.jpg" alt="Botão incluir para nova falta">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img238.jpg" alt="Tela de cadastro de falta completo">
+          </div>
+        </section>
+
+        <section id="cadastro-ferias">
+          <h3>CADASTRO DE FÉRIAS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE FÉRIAS POSSUI COMO FINALIDADE O CADASTRAMENTO DE FÉRIAS DOS FUNCIONÁRIOS NO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "FÉRIAS" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA SELECIONE O TIPO, SENDO "INDIVIDUAIS", "COLETIVAS" E "FÉRIAS REQUISITADAS".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img240.jpg" alt="Tela de acesso ao cadastro de férias">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img242.jpg" alt="Botão incluir para novas férias">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img244.jpg" alt="Tela de cadastro de férias completo">
+          </div>
+        </section>
+
+        <section id="cadastro-concursos">
+          <h3>CADASTRO DE CONCURSOS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE CONCURSOS POSSUI COMO FINALIDADE O CADASTRAMENTO DE CONCURSOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "CONCURSO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "CADASTRO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img246.jpg" alt="Tela de acesso ao cadastro de concursos">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img248.jpg" alt="Botão incluir para novo concurso">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img250.jpg" alt="Tela de cadastro de concurso completo">
+          </div>
+        </section>
+
+        <section id="cadastro-candidatos">
+          <h3>CADASTRO DE CANDIDATOS DOS CONCURSOS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE CANDIDATOS DOS CONCURSOS POSSUI COMO FINALIDADE O CADASTRAMENTO DOS CANDIDATOS DOS CONCURSOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "CONCURSO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "CANDIDATO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img252.jpg" alt="Tela de acesso ao cadastro de candidatos">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img254.jpg" alt="Botão incluir para novo candidato">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img256.jpg" alt="Tela de cadastro de candidato completo">
+          </div>
+        </section>
+
+        <section id="cadastro-treinamento">
+          <h3>CADASTRO DE TREINAMENTO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE TREINAMENTO POSSUI COMO FINALIDADE O CADASTRAMENTO DE TREINAMENTOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "TREINAMENTO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "CADASTRO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img258.jpg" alt="Tela de acesso ao cadastro de treinamento">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img260.jpg" alt="Botão incluir para novo treinamento">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img262.jpg" alt="Tela de cadastro de treinamento completo">
+          </div>
+        </section>
+
+        <section id="cadastro-tipo-treinamento">
+          <h3>CADASTRO DO TIPO DE TREINAMENTO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO TIPO DE TREINAMENTO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS TIPOS DE TREINAMENTOS DADOS PELO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "TREINAMENTO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "TIPO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img264.jpg" alt="Tela de acesso ao cadastro de tipo de treinamento">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img266.jpg" alt="Botão incluir para novo tipo">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img268.jpg" alt="Tela de cadastro de tipo completo">
+          </div>
+        </section>
+
+        <section id="cadastro-fornecedor">
+          <h3>CADASTRO DO FORNECEDOR DE TREINAMENTO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO FORNECEDOR DE TREINAMENTO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS FORNECEDORES DE TREINAMENTOS DADOS PELO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "TREINAMENTO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "ENTIDADE / FORNECEDOR CREDOR".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img270.jpg" alt="Tela de acesso ao cadastro de fornecedor">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img272.jpg" alt="Botão incluir para novo fornecedor">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img274.jpg" alt="Tela de cadastro de fornecedor completo">
+          </div>
+        </section>
+
+        <section id="cadastro-sindicato">
+          <h3>CADASTRO DO SINDICATO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO SINDICATO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS SINDICATOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "SINDICATO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img276.jpg" alt="Tela de acesso ao cadastro de sindicato">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img278.jpg" alt="Botão incluir para novo sindicato">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img280.jpg" alt="Tela de cadastro de sindicato completo">
+          </div>
+        </section>
+
+        <section id="cadastro-funcao">
+          <h3>CADASTRO DA FUNÇÃO DO FUNCIONÁRIO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DA FUNÇÃO DO FUNCIONÁRIO POSSUI COMO FINALIDADE O CADASTRAMENTO DAS FUNÇÕES DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "FUNÇÃO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "FUNCIONÁRIO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img282.jpg" alt="Tela de acesso ao cadastro de função">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img284.jpg" alt="Botão incluir para nova função">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img286.jpg" alt="Tela de cadastro de função completo">
+          </div>
+        </section>
+
+        <section id="cadastro-regime">
+          <h3>CADASTRO DO REGIME DO FUNCIONÁRIO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO REGIME DO FUNCIONÁRIO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS REGIMES DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "FUNÇÃO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "REGIME".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img288.jpg" alt="Tela de acesso ao cadastro de regime">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img290.jpg" alt="Botão incluir para novo regime">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img292.jpg" alt="Tela de cadastro de regime completo">
+          </div>
+        </section>
+
+        <section id="cadastro-local-trabalho">
+          <h3>CADASTRO DO LOCAL DE TRABALHO DO FUNCIONÁRIO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO LOCAL DE TRABALHO DO FUNCIONÁRIO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS LOCAIS DE TRABALHO DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "LOCAL TRABALHO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img294.jpg" alt="Tela de acesso ao cadastro de local de trabalho">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img296.jpg" alt="Botão incluir para novo local">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img298.jpg" alt="Tela de cadastro de local completo">
+          </div>
+        </section>
+
+        <section id="cadastro-dirf">
+          <h3>CADASTRO DA DIRF</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DA DIRF PARA PREENCHIMENTO DAS INFORMAÇÕES LEGAIS DA DIRF.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "DADOS INICIAIS" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "DIRF".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img300.jpg" alt="Tela de cadastro da DIRF">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img302.jpg" alt="Tela de cadastro da DIRF completo">
+          </div>
+        </section>
+
+        <section id="cadastro-rais">
+          <h3>CADASTRO DA RAIS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DA RAIS PARA PREENCHIMENTO DAS INFORMAÇÕES LEGAIS DA RAIS.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "DADOS INICIAIS" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "RAIS".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img304.jpg" alt="Tela de cadastro da RAIS">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img306.jpg" alt="Tela de cadastro da RAIS completo">
+          </div>
+        </section>
+
+        <section id="cadastro-evento">
+          <h3>CADASTRO DE EVENTO</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO EVENTO POSSUI COMO FINALIDADE O CADASTRAMENTO DOS EVENTOS SALARIAIS DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "EVENTO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img308.jpg" alt="Tela de acesso ao cadastro de evento">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img310.jpg" alt="Botão incluir para novo evento">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img312.jpg" alt="Tela de cadastro de evento completo">
+          </div>
+        </section>
+
+        <section id="cadastro-evento-especial">
+          <h3>CADASTRO DE EVENTO ESPECIAL</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO EVENTO ESPECIAL POSSUI COMO FINALIDADE O CADASTRAMENTO DOS EVENTOS ESPECIAIS SALARIAIS DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "ÊNIO / ESPECIAL" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img314.jpg" alt="Tela de acesso ao cadastro de evento especial">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img316.jpg" alt="Botão incluir para novo evento especial">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img318.jpg" alt="Tela de cadastro de evento especial completo">
+          </div>
+        </section>
+
+        <section id="cadastro-lancamentos">
+          <h3>CADASTRO DE LANÇAMENTOS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DO LANÇAMENTOS POSSUI COMO FINALIDADE O CADASTRAMENTO DOS LANÇAMENTOS SALARIAIS DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "LANÇAMENTO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, SELECIONE "NORMAL", "EM GRUPO / 13º", "RESCISÃO EM GRUPO" E "CONTRIBUIÇÃO EXTERNA".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img320.jpg" alt="Tela de acesso ao cadastro de lançamentos">
+          </div>
+
+          <div class="passo">
+            <h4>2º PASSO:</h4>
+            <p>CLIQUE EM INCLUIR PARA INICIAR UM NOVO CADASTRO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img322.jpg" alt="Botão incluir para novo lançamento">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE GRAVAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img324.jpg" alt="Tela de cadastro de lançamento completo">
+          </div>
+        </section>
+
+        <section id="cadastro-informes">
+          <h3>CADASTRO DE INFORMES</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            O CADASTRO DE INFORMES POSSUI COMO FINALIDADE O CADASTRAMENTO DOS DE INFORMES DOS PAGAMENTOS SALARIAIS DOS FUNCIONÁRIOS DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "INFORMES" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, SELECIONE "PAGAMENTO / SITUAÇÃO / BLOQUEIO" E "EMPENHO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img326.jpg" alt="Tela de acesso ao cadastro de informes">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>APÓS O PREENCHIMENTO DE TODAS AS INFORMAÇÕES NECESSÁRIAS, CLIQUE NO BOTÃO DE PROCESSAR.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img328.jpg" alt="Tela de cadastro de informes completo">
+          </div>
+        </section>
+      </section>
+
+      <section id="gestao-pesquisas">
+        <h2>GESTÃO DE PESQUISAS</h2>
+
+        <h3>GESTÃO DE PESQUISAS POR FUNCIONALIDADES</h3>
+        
+        <div class="nota">
+          <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+          É POSSÍVEL REALIZAR PESQUISA DE TODAS AS TELAS CADASTRAIS DESDE QUE SEJA OBSERVADA A LUPA NA REFERIDA TELA.<br><br>
+          TAL PESQUISA PODE SER REALIZADA DE FORMA DIRETA (COM PARÂMETROS EXATOS DE CONSULTA) OU GENÉRICA (COM PREENCHIMENTO GENÉRICO DE CONSULTA)
+        </div>
+
+        <div class="passo">
+          <h4>1º PASSO:</h4>
+          <p>DEVE-SE ACESSAR A TELA FUNCIONAL DESEJADA, E CLIQUE NA LUPA.</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img330.jpg" alt="Tela de pesquisa">
+        </div>
+
+        <div class="finalizacao">
+          <h4>FINALIZAÇÃO:</h4>
+          <p><strong>PESQUISA GENÉRICA:</strong><br>
+          NO ESPAÇO DE BUSCA, INSIRA O NOME PESQUISADO (ELE PODERÁ SER GENÉRICO, QUE TRARÁ TODOS OS RESULTADOS DO MÓDULO QUE ENVOLVEM O NOME DA PESQUISA.</p>
+          
+          <p><strong>PESQUISA DIRETA:</strong><br>
+          CLIQUE NO FILTRO PARA PESQUISAR OS RESULTADO EM UM CAMPO ESPECÍFICO.</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img332.jpg" alt="Tipos de pesquisa">
+        </div>
+      </section>
+
+      <section id="gestao-parametrizacoes">
+        <h2>GESTÃO DE PARAMETRIZAÇÕES</h2>
+
+        <h3>GESTÃO DE PARAMETRIZAÇÕES</h3>
+        
+        <div class="nota">
+          <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+          ATRAVÉS DESTA FUNÇÃO, É POSSÍVEL PARAMETRIZAR CÁLCULOS, LIMITES, CONTRIBUIÇÕES, ETC.
+        </div>
+
+        <div class="passo">
+          <h4>1º PASSO:</h4>
+          <p>CLIQUE NO BOTÃO REDONDO DE CONFIGURAÇÃO (CANTO SUPERIOR ESQUERDO), EM SEGUIDA CLIQUE EM "PARÂMETROS", EM SEGUIDA EM "RECURSOS HUMANOS".</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img334.jpg" alt="Tela de parametrizações">
+        </div>
+
+        <div class="finalizacao">
+          <h4>FINALIZAÇÃO:</h4>
+          <p>PREENCHA OS CAMPOS COM AS PARAMETRIZAÇÕES DEVIDAS E CLIQUE EM OK.</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img336.jpg" alt="Tela de parametrizações completo">
+        </div>
+      </section>
+
+      <section id="gestao-relatorios">
+        <h2>GESTÃO DE RELATÓRIOS</h2>
+
+        <h3>RELATÓRIOS DE RECURSOS HUMANOS</h3>
+        
+        <div class="nota">
+          <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+          O CONTABILIS CONTA COM UMA ENORME GAMA DE RELATÓRIOS GERENCIAIS, CONTANDO COM INFORMAÇÕES SINTÉTICAS, ANALÍTICAS E GERAIS.<br><br>
+          ALÉM DISSO, TAMBÉM É POSSÍVEL FILTRAR POR CAMPOS.
+        </div>
+
+        <div class="passo">
+          <h4>1º PASSO:</h4>
+          <p>DEVE-SE ACESSAR O AMBIENTE "RELATÓRIO/GRÁFICO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS. EM SEGUIDA, DEVERÁ SER ACESSADO O AMBIENTE "RELATÓRIOS RECURSOS HUMANOS".</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img338.jpg" alt="Tela de relatórios">
+        </div>
+
+        <div class="passo">
+          <h4>2º PASSO:</h4>
+          <p>SELECIONE O RELATÓRIO DESEJADO, E EM CASO DE PREFERÊNCIA DO RELATÓRIO NAS CONDIÇÕES ATUAIS, CLIQUE DIRETAMENTE EM IMPRIMIR.</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img340.jpg" alt="Seleção de relatório">
+        </div>
+
+        <div class="passo">
+          <h4>3º PASSO:</h4>
+          <p>SELECIONE O RELATÓRIO DESEJADO, E EM CASO DE NECESSIDADE DE MUDANÇA DAS CONDIÇÕES ATUAIS DO RELATÓRIO, CLIQUE EM FILTRAR.</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img342.jpg" alt="Filtrar relatório">
+        </div>
+
+        <div class="finalizacao">
+          <h4>FINALIZAÇÃO:</h4>
+          <p>SELECIONE O TIPO DE FILTRO DESEJADO, INFORME O PARÂMETRO NO CAMPO DE BUSCA E CLIQUE EM OK.</p>
+          <p><strong>OBS¹:</strong> É POSSÍVEL FAZER CRUZAMENTO DE FILTROS PARA ELABORAR UM RELATÓRIO MAIS PRECISO EM CASO DE NECESSIDADE.</p>
+          <p><strong>OBS²:</strong> O BOTÃO "MANTER FILTRO" SERVE PARA DEIXAR O FILTRO SALVO EM CASO DE NECESSIDADE (UTILIZADO PARA MANTER FILTROS MAIS COMPLEXOS)</p>
+        </div>
+
+        <div class="imagem-container">
+          <img src="./images/img344.jpg" alt="Aplicar filtros">
+        </div>
+      </section>
+
+      <section id="gestao-esocial">
+        <h2>GESTÃO DO eSocial</h2>
+
+        <section id="qualificacao-cadastral">
+          <h3>QUALIFICAÇÃO CADASTRAL</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            FUNCIONALIDADE DESENVOLVIDA PARA ABARCAR A IMPORTAÇÃO DO ARQUIVO DE QUALIFICAÇÃO CADASTRAL DO eSocial.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "eSocial" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "QUALIFICAÇÃO CADASTRAL".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img346.jpg" alt="Tela de qualificação cadastral">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>IMPORTE O ARQUIVO E EM SEGUIDA, VALIDE E/OU IMPRIMA O RESULTADO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img348.jpg" alt="Importação de arquivo">
+          </div>
+        </section>
+
+        <section id="configuracao-esocial">
+          <h3>CONFIGURAÇÃO DO eSocial</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            FUNCIONALIDADE DESENVOLVIDA PARA ABARCAR A CONFIGURAÇÃO DO eSocial.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "eSocial" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "CONFIGURAÇÃO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img350.jpg" alt="Tela de configuração do eSocial">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>REALIZE AS CONFIGURAÇÕES DEVIDAS E CLIQUE EM "OK".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img352.jpg" alt="Configurações do eSocial">
+          </div>
+        </section>
+
+        <section id="exportacao-esocial">
+          <h3>EXPORTAÇÃO DO eSocial</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            FUNCIONALIDADE DESENVOLVIDA PARA ABARCAR AS EXPORTAÇÕES LEGAIS DO eSocial.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "eSocial" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "EXPORTAÇÃO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img354.jpg" alt="Tela de exportação do eSocial">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>REALIZE AS CONFIGURAÇÕES E PARAMETRIZAÇÕES DEVIDAS, PROSSIGA E EXPORTE.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img356.jpg" alt="Exportação do eSocial">
+          </div>
+        </section>
+
+        <section id="painel-envio">
+          <h3>PAINEL DE ENVIO DO eSocial</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            TELA CRIADA PARA A VISUALIZAÇÃO DOS ENVIOS DO eSocial.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "eSocial" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "PAINEL ENVIO".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img358.jpg" alt="Tela de painel de envio">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>VISUALIZE OS ENVIOS DO eSocial ATRAVÉS DO PAINEL E REVEJA OS EVENTOS DOS LOTES ENVIADOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img360.jpg" alt="Painel de envio do eSocial">
+          </div>
+        </section>
+      </section>
+
+      <section id="outras-funcionalidades">
+        <h2>OUTRAS FUNCIONALIDADES</h2>
+
+        <section id="recalcular-lancamentos">
+          <h3>RECALCULAR LANÇAMENTOS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            TELA CRIADA PARA VERIFICAR INCONSISTÊNCIAS DE LANÇAMENTO PARA QUE SEJA REALIZADO O RECÁLCULO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "RECALCULAR LANÇAMENTOS" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img362.jpg" alt="Tela de recalcular lançamentos">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>VERIFIQUE AS INCONSISTÊNCIAS QUANDO HOUVER E REALIZE O RECALCULO QUANDO NECESSÁRIO.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img364.jpg" alt="Recálculo de lançamentos">
+          </div>
+        </section>
+
+        <section id="fechamento-folha">
+          <h3>FECHAMENTO DA FOLHA</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            FUNCIONALIDADE BASE DESENVOLVIDA PARA O FECHAMENTO DA FOLHA DE PAGAMENTO DOS SERVIDORES DO ÓRGÃO.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "FECHAMENTO" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS, EM SEGUIDA CLIQUE EM "FECHAMENTO DA FOLHA".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img366.jpg" alt="Tela de fechamento da folha">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>REALIZE O CHECKLIST DOS PARÂMETROS EXECUTADOS E CONFIRME O FECHAMENTO DA FOLHA.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img368.jpg" alt="Confirmar fechamento da folha">
+          </div>
+        </section>
+
+        <section id="checklist">
+          <h3>CHECKLIST DE VERIFICAÇÃO DO MÓDULO DE RECURSOS HUMANOS</h3>
+          
+          <div class="nota">
+            <strong>NOTA INICIAL DO ORGANIZADOR:</strong><br>
+            FUNCIONALIDADE DESENVOLVIDA COM O VIÉS DE VERIFICAÇÃO DAS FUNÇÕES DO MÓDULO DE RECURSOS HUMANOS.
+          </div>
+
+          <div class="passo">
+            <h4>1º PASSO:</h4>
+            <p>DEVE-SE ACESSAR O AMBIENTE "CHECKLIST" NA ABA PRINCIPAL DO MÓDULO DE RECURSOS HUMANOS.</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img370.jpg" alt="Tela de checklist">
+          </div>
+
+          <div class="finalizacao">
+            <h4>FINALIZAÇÃO:</h4>
+            <p>PARA VERIFICAR AS FUNÇÕES, CLIQUE NO BOTÃO "ATUALIZAR".</p>
+          </div>
+
+          <div class="imagem-container">
+            <img src="./images/img372.jpg" alt="Checklist atualizado">
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <footer>
+      <p><strong>Manual de Recursos Humanos - Sistema Contabilis</strong></p>
+      <p>Versão 1.0 - Atualizado em 30 de Novembro de 2022</p>
+      <p>Organizado por Juan Miguel Andrade Obinu Gonzalez - Gerente de Tecnologia da Rarotec</p>
+    </footer>
+  </div>
+</body>
+</html>
